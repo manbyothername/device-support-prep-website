@@ -1,41 +1,71 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# --------------------
+# Environment files
+# --------------------
+.env
+.env.*
+!.env.example
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# --------------------
+# Node / package managers
+# --------------------
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+.pnp.*
+.pnpm-store/
 
-# env files (can opt-in for committing if needed)
-.env*
+# --------------------
+# Next.js build output
+# --------------------
+.next/
+out/
+dist/
+build/
+.vercel/
 
-# vercel
-.vercel
+# --------------------
+# Local tooling / OS junk
+# --------------------
+.DS_Store
+Thumbs.db
 
-# typescript
+# --------------------
+# Editors / IDE
+# --------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# --------------------
+# TypeScript cache
+# --------------------
 *.tsbuildinfo
-next-env.d.ts
+
+# --------------------
+# Test / coverage
+# --------------------
+coverage/
+
+# --------------------
+# Supabase local dev (optional)
+# If you use `supabase start`, it generates local stuff you don't want tracked
+# --------------------
+.supabase/
+
+# --------------------
+# Secrets / keys / exports (common accidents)
+# --------------------
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# --------------------
+# Logs
+# --------------------
+logs/
+*.log
